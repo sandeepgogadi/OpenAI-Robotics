@@ -1,0 +1,5 @@
+python FetchSlide.py |& tee sample.txt
+
+python -m baselines.her.experiment.train --env FetchSlide-v1 --logdir logs --n_epochs 50 --num_cpu 4 --policy_save_interval 5 |& tee train.txt
+
+python -m baselines.her.experiment.play logs/policy_best.pkl |& tee test.txt

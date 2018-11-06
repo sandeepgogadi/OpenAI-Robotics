@@ -1,0 +1,5 @@
+python3 FetchPickAndPlace.py |& tee sample.txt
+
+python3 -m baselines.her.experiment.train --env FetchPickAndPlace-v1 --logdir logs --n_epochs 100 --num_cpu 4 --policy_save_interval 5 |& tee train.txt
+
+python3 -m baselines.her.experiment.play logs/policy_best.pkl |& tee test.txt

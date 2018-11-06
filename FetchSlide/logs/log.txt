@@ -1,0 +1,662 @@
+Logging to logs
+T: 50
+_Q_lr: 0.001
+_action_l2: 1.0
+_batch_size: 256
+_buffer_size: 1000000
+_clip_obs: 200.0
+_hidden: 256
+_layers: 3
+_max_u: 1.0
+_network_class: baselines.her.actor_critic:ActorCritic
+_norm_clip: 5
+_norm_eps: 0.01
+_pi_lr: 0.001
+_polyak: 0.95
+_relative_goals: False
+_scope: ddpg
+ddpg_params: {'buffer_size': 1000000, 'hidden': 256, 'layers': 3, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'polyak': 0.95, 'batch_size': 256, 'Q_lr': 0.001, 'pi_lr': 0.001, 'norm_eps': 0.01, 'norm_clip': 5, 'max_u': 1.0, 'action_l2': 1.0, 'clip_obs': 200.0, 'scope': 'ddpg', 'relative_goals': False}
+env_name: FetchSlide-v1
+gamma: 0.98
+make_env: <function prepare_params.<locals>.make_env at 0x7faa2a9cb2f0>
+n_batches: 40
+n_cycles: 50
+n_test_rollouts: 10
+noise_eps: 0.2
+random_eps: 0.3
+replay_k: 4
+replay_strategy: future
+rollout_batch_size: 2
+test_with_polyak: False
+Creating a DDPG agent with action space 4 x 1.0...
+Training...
+------------------------------------
+| epoch              | 0           |
+| stats_g/mean       | 0.7446496   |
+| stats_g/std        | 0.113453425 |
+| stats_o/mean       | 0.17763616  |
+| stats_o/std        | 0.04747559  |
+| test/episode       | 20.0        |
+| test/mean_Q        | -3.2515051  |
+| test/success_rate  | 0.0         |
+| train/episode      | 100.0       |
+| train/success_rate | 0.0025      |
+------------------------------------
+New best success rate: 0.0. Saving policy to logs/policy_best.pkl ...
+Saving periodic policy to logs/policy_0.pkl ...
+------------------------------------
+| epoch              | 1           |
+| stats_g/mean       | 0.74497485  |
+| stats_g/std        | 0.11479283  |
+| stats_o/mean       | 0.17718719  |
+| stats_o/std        | 0.053126067 |
+| test/episode       | 40.0        |
+| test/mean_Q        | -5.2829533  |
+| test/success_rate  | 0.0         |
+| train/episode      | 200.0       |
+| train/success_rate | 0.0         |
+------------------------------------
+New best success rate: 0.0. Saving policy to logs/policy_best.pkl ...
+------------------------------------
+| epoch              | 2           |
+| stats_g/mean       | 0.7457754   |
+| stats_g/std        | 0.11722764  |
+| stats_o/mean       | 0.17768024  |
+| stats_o/std        | 0.053241916 |
+| test/episode       | 60.0        |
+| test/mean_Q        | -7.0303283  |
+| test/success_rate  | 0.0         |
+| train/episode      | 300.0       |
+| train/success_rate | 0.0025      |
+------------------------------------
+New best success rate: 0.0. Saving policy to logs/policy_best.pkl ...
+-----------------------------------
+| epoch              | 3          |
+| stats_g/mean       | 0.7470285  |
+| stats_g/std        | 0.1225803  |
+| stats_o/mean       | 0.17793097 |
+| stats_o/std        | 0.05513136 |
+| test/episode       | 80.0       |
+| test/mean_Q        | -9.240154  |
+| test/success_rate  | 0.0        |
+| train/episode      | 400.0      |
+| train/success_rate | 0.0        |
+-----------------------------------
+New best success rate: 0.0. Saving policy to logs/policy_best.pkl ...
+------------------------------------
+| epoch              | 4           |
+| stats_g/mean       | 0.74761516  |
+| stats_g/std        | 0.12811841  |
+| stats_o/mean       | 0.1781928   |
+| stats_o/std        | 0.057110034 |
+| test/episode       | 100.0       |
+| test/mean_Q        | -10.823275  |
+| test/success_rate  | 0.0125      |
+| train/episode      | 500.0       |
+| train/success_rate | 0.0         |
+------------------------------------
+New best success rate: 0.0125. Saving policy to logs/policy_best.pkl ...
+-----------------------------------
+| epoch              | 5          |
+| stats_g/mean       | 0.7475672  |
+| stats_g/std        | 0.1298214  |
+| stats_o/mean       | 0.1781373  |
+| stats_o/std        | 0.0587741  |
+| test/episode       | 120.0      |
+| test/mean_Q        | -12.366743 |
+| test/success_rate  | 0.025      |
+| train/episode      | 600.0      |
+| train/success_rate | 0.005      |
+-----------------------------------
+New best success rate: 0.025. Saving policy to logs/policy_best.pkl ...
+Saving periodic policy to logs/policy_5.pkl ...
+------------------------------------
+| epoch              | 6           |
+| stats_g/mean       | 0.7489744   |
+| stats_g/std        | 0.13396688  |
+| stats_o/mean       | 0.1785987   |
+| stats_o/std        | 0.061032936 |
+| test/episode       | 140.0       |
+| test/mean_Q        | -13.812582  |
+| test/success_rate  | 0.025       |
+| train/episode      | 700.0       |
+| train/success_rate | 0.0025      |
+------------------------------------
+New best success rate: 0.025. Saving policy to logs/policy_best.pkl ...
+------------------------------------
+| epoch              | 7           |
+| stats_g/mean       | 0.7504251   |
+| stats_g/std        | 0.14072646  |
+| stats_o/mean       | 0.1789377   |
+| stats_o/std        | 0.063923575 |
+| test/episode       | 160.0       |
+| test/mean_Q        | -13.658082  |
+| test/success_rate  | 0.0         |
+| train/episode      | 800.0       |
+| train/success_rate | 0.01        |
+------------------------------------
+--------------------------------------------
+| epoch              | 8                   |
+| stats_g/mean       | 0.7527805           |
+| stats_g/std        | 0.14829327          |
+| stats_o/mean       | 0.17934512          |
+| stats_o/std        | 0.06739972          |
+| test/episode       | 180.0               |
+| test/mean_Q        | -14.579349          |
+| test/success_rate  | 0.08750000000000001 |
+| train/episode      | 900.0               |
+| train/success_rate | 0.0275              |
+--------------------------------------------
+New best success rate: 0.08750000000000001. Saving policy to logs/policy_best.pkl ...
+---------------------------------------------
+| epoch              | 9                    |
+| stats_g/mean       | 0.75539714           |
+| stats_g/std        | 0.15551256           |
+| stats_o/mean       | 0.1801057            |
+| stats_o/std        | 0.07091153           |
+| test/episode       | 200.0                |
+| test/mean_Q        | -15.977509           |
+| test/success_rate  | 0.037500000000000006 |
+| train/episode      | 1000.0               |
+| train/success_rate | 0.0175               |
+---------------------------------------------
+---------------------------------------------
+| epoch              | 10                   |
+| stats_g/mean       | 0.75617474           |
+| stats_g/std        | 0.16402896           |
+| stats_o/mean       | 0.18030769           |
+| stats_o/std        | 0.074883245          |
+| test/episode       | 220.0                |
+| test/mean_Q        | -16.078342           |
+| test/success_rate  | 0.037500000000000006 |
+| train/episode      | 1100.0               |
+| train/success_rate | 0.027500000000000004 |
+---------------------------------------------
+Saving periodic policy to logs/policy_10.pkl ...
+-----------------------------------
+| epoch              | 11         |
+| stats_g/mean       | 0.7564867  |
+| stats_g/std        | 0.17147982 |
+| stats_o/mean       | 0.18032184 |
+| stats_o/std        | 0.08004634 |
+| test/episode       | 240.0      |
+| test/mean_Q        | -15.523522 |
+| test/success_rate  | 0.05       |
+| train/episode      | 1200.0     |
+| train/success_rate | 0.0325     |
+-----------------------------------
+---------------------------------------------
+| epoch              | 12                   |
+| stats_g/mean       | 0.7593112            |
+| stats_g/std        | 0.17541629           |
+| stats_o/mean       | 0.1807105            |
+| stats_o/std        | 0.08336106           |
+| test/episode       | 260.0                |
+| test/mean_Q        | -14.679259           |
+| test/success_rate  | 0.08750000000000001  |
+| train/episode      | 1300.0               |
+| train/success_rate | 0.052500000000000005 |
+---------------------------------------------
+New best success rate: 0.08750000000000001. Saving policy to logs/policy_best.pkl ...
+-----------------------------------
+| epoch              | 13         |
+| stats_g/mean       | 0.7623825  |
+| stats_g/std        | 0.17742461 |
+| stats_o/mean       | 0.18127905 |
+| stats_o/std        | 0.08504487 |
+| test/episode       | 280.0      |
+| test/mean_Q        | -14.589919 |
+| test/success_rate  | 0.15       |
+| train/episode      | 1400.0     |
+| train/success_rate | 0.0575     |
+-----------------------------------
+New best success rate: 0.15. Saving policy to logs/policy_best.pkl ...
+--------------------------------------------
+| epoch              | 14                  |
+| stats_g/mean       | 0.7657469           |
+| stats_g/std        | 0.17794268          |
+| stats_o/mean       | 0.18171176          |
+| stats_o/std        | 0.08573208          |
+| test/episode       | 300.0               |
+| test/mean_Q        | -12.980267          |
+| test/success_rate  | 0.2375              |
+| train/episode      | 1500.0              |
+| train/success_rate | 0.07500000000000001 |
+--------------------------------------------
+New best success rate: 0.2375. Saving policy to logs/policy_best.pkl ...
+-----------------------------------
+| epoch              | 15         |
+| stats_g/mean       | 0.76871973 |
+| stats_g/std        | 0.17780185 |
+| stats_o/mean       | 0.18227936 |
+| stats_o/std        | 0.08585805 |
+| test/episode       | 320.0      |
+| test/mean_Q        | -13.417135 |
+| test/success_rate  | 0.175      |
+| train/episode      | 1600.0     |
+| train/success_rate | 0.0925     |
+-----------------------------------
+Saving periodic policy to logs/policy_15.pkl ...
+--------------------------------------------
+| epoch              | 16                  |
+| stats_g/mean       | 0.7709498           |
+| stats_g/std        | 0.17788102          |
+| stats_o/mean       | 0.18273474          |
+| stats_o/std        | 0.08577817          |
+| test/episode       | 340.0               |
+| test/mean_Q        | -14.665472          |
+| test/success_rate  | 0.27499999999999997 |
+| train/episode      | 1700.0              |
+| train/success_rate | 0.0825              |
+--------------------------------------------
+New best success rate: 0.27499999999999997. Saving policy to logs/policy_best.pkl ...
+-----------------------------------
+| epoch              | 17         |
+| stats_g/mean       | 0.77463824 |
+| stats_g/std        | 0.17823525 |
+| stats_o/mean       | 0.18334407 |
+| stats_o/std        | 0.08644798 |
+| test/episode       | 360.0      |
+| test/mean_Q        | -12.576585 |
+| test/success_rate  | 0.275      |
+| train/episode      | 1800.0     |
+| train/success_rate | 0.145      |
+-----------------------------------
+New best success rate: 0.275. Saving policy to logs/policy_best.pkl ...
+--------------------------------------------
+| epoch              | 18                  |
+| stats_g/mean       | 0.77707773          |
+| stats_g/std        | 0.17862041          |
+| stats_o/mean       | 0.1838167           |
+| stats_o/std        | 0.0872029           |
+| test/episode       | 380.0               |
+| test/mean_Q        | -13.792717          |
+| test/success_rate  | 0.32499999999999996 |
+| train/episode      | 1900.0              |
+| train/success_rate | 0.10500000000000001 |
+--------------------------------------------
+New best success rate: 0.32499999999999996. Saving policy to logs/policy_best.pkl ...
+-----------------------------------
+| epoch              | 19         |
+| stats_g/mean       | 0.7790227  |
+| stats_g/std        | 0.17868741 |
+| stats_o/mean       | 0.18425825 |
+| stats_o/std        | 0.08755718 |
+| test/episode       | 400.0      |
+| test/mean_Q        | -15.805689 |
+| test/success_rate  | 0.1875     |
+| train/episode      | 2000.0     |
+| train/success_rate | 0.125      |
+-----------------------------------
+-----------------------------------
+| epoch              | 20         |
+| stats_g/mean       | 0.78173107 |
+| stats_g/std        | 0.17867322 |
+| stats_o/mean       | 0.18471752 |
+| stats_o/std        | 0.08827008 |
+| test/episode       | 420.0      |
+| test/mean_Q        | -14.339192 |
+| test/success_rate  | 0.275      |
+| train/episode      | 2100.0     |
+| train/success_rate | 0.1225     |
+-----------------------------------
+Saving periodic policy to logs/policy_20.pkl ...
+-----------------------------------
+| epoch              | 21         |
+| stats_g/mean       | 0.78376836 |
+| stats_g/std        | 0.1786925  |
+| stats_o/mean       | 0.18501641 |
+| stats_o/std        | 0.08884296 |
+| test/episode       | 440.0      |
+| test/mean_Q        | -13.908176 |
+| test/success_rate  | 0.375      |
+| train/episode      | 2200.0     |
+| train/success_rate | 0.1275     |
+-----------------------------------
+New best success rate: 0.375. Saving policy to logs/policy_best.pkl ...
+------------------------------------
+| epoch              | 22          |
+| stats_g/mean       | 0.78546244  |
+| stats_g/std        | 0.17838329  |
+| stats_o/mean       | 0.1853444   |
+| stats_o/std        | 0.089342125 |
+| test/episode       | 460.0       |
+| test/mean_Q        | -13.042994  |
+| test/success_rate  | 0.45        |
+| train/episode      | 2300.0      |
+| train/success_rate | 0.13        |
+------------------------------------
+New best success rate: 0.45. Saving policy to logs/policy_best.pkl ...
+-----------------------------------
+| epoch              | 23         |
+| stats_g/mean       | 0.78724766 |
+| stats_g/std        | 0.17827643 |
+| stats_o/mean       | 0.18567376 |
+| stats_o/std        | 0.08994691 |
+| test/episode       | 480.0      |
+| test/mean_Q        | -13.864929 |
+| test/success_rate  | 0.2625     |
+| train/episode      | 2400.0     |
+| train/success_rate | 0.11       |
+-----------------------------------
+-----------------------------------
+| epoch              | 24         |
+| stats_g/mean       | 0.7890148  |
+| stats_g/std        | 0.17811213 |
+| stats_o/mean       | 0.18605284 |
+| stats_o/std        | 0.09040061 |
+| test/episode       | 500.0      |
+| test/mean_Q        | -11.841665 |
+| test/success_rate  | 0.475      |
+| train/episode      | 2500.0     |
+| train/success_rate | 0.18       |
+-----------------------------------
+New best success rate: 0.475. Saving policy to logs/policy_best.pkl ...
+--------------------------------------------
+| epoch              | 25                  |
+| stats_g/mean       | 0.79035705          |
+| stats_g/std        | 0.17799605          |
+| stats_o/mean       | 0.18640259          |
+| stats_o/std        | 0.090682566         |
+| test/episode       | 520.0               |
+| test/mean_Q        | -14.732826          |
+| test/success_rate  | 0.375               |
+| train/episode      | 2600.0              |
+| train/success_rate | 0.15500000000000003 |
+--------------------------------------------
+Saving periodic policy to logs/policy_25.pkl ...
+-----------------------------------
+| epoch              | 26         |
+| stats_g/mean       | 0.79160666 |
+| stats_g/std        | 0.17852664 |
+| stats_o/mean       | 0.18666106 |
+| stats_o/std        | 0.09120594 |
+| test/episode       | 540.0      |
+| test/mean_Q        | -14.363436 |
+| test/success_rate  | 0.3        |
+| train/episode      | 2700.0     |
+| train/success_rate | 0.1725     |
+-----------------------------------
+-----------------------------------
+| epoch              | 27         |
+| stats_g/mean       | 0.7928586  |
+| stats_g/std        | 0.17813145 |
+| stats_o/mean       | 0.18690461 |
+| stats_o/std        | 0.09141173 |
+| test/episode       | 560.0      |
+| test/mean_Q        | -13.172073 |
+| test/success_rate  | 0.3875     |
+| train/episode      | 2800.0     |
+| train/success_rate | 0.1725     |
+-----------------------------------
+--------------------------------------------
+| epoch              | 28                  |
+| stats_g/mean       | 0.7936546           |
+| stats_g/std        | 0.17839111          |
+| stats_o/mean       | 0.18703112          |
+| stats_o/std        | 0.09222622          |
+| test/episode       | 580.0               |
+| test/mean_Q        | -12.54092           |
+| test/success_rate  | 0.36250000000000004 |
+| train/episode      | 2900.0              |
+| train/success_rate | 0.1525              |
+--------------------------------------------
+--------------------------------------------
+| epoch              | 29                  |
+| stats_g/mean       | 0.79483175          |
+| stats_g/std        | 0.17851311          |
+| stats_o/mean       | 0.18733524          |
+| stats_o/std        | 0.09295106          |
+| test/episode       | 600.0               |
+| test/mean_Q        | -14.243002          |
+| test/success_rate  | 0.375               |
+| train/episode      | 3000.0              |
+| train/success_rate | 0.11750000000000001 |
+--------------------------------------------
+--------------------------------------------
+| epoch              | 30                  |
+| stats_g/mean       | 0.79550105          |
+| stats_g/std        | 0.17900348          |
+| stats_o/mean       | 0.18739705          |
+| stats_o/std        | 0.09388117          |
+| test/episode       | 620.0               |
+| test/mean_Q        | -15.344125          |
+| test/success_rate  | 0.3                 |
+| train/episode      | 3100.0              |
+| train/success_rate | 0.13999999999999999 |
+--------------------------------------------
+Saving periodic policy to logs/policy_30.pkl ...
+--------------------------------------------
+| epoch              | 31                  |
+| stats_g/mean       | 0.7965643           |
+| stats_g/std        | 0.17892317          |
+| stats_o/mean       | 0.18763901          |
+| stats_o/std        | 0.09427739          |
+| test/episode       | 640.0               |
+| test/mean_Q        | -11.263885          |
+| test/success_rate  | 0.48750000000000004 |
+| train/episode      | 3200.0              |
+| train/success_rate | 0.1575              |
+--------------------------------------------
+New best success rate: 0.48750000000000004. Saving policy to logs/policy_best.pkl ...
+--------------------------------------------
+| epoch              | 32                  |
+| stats_g/mean       | 0.7968707           |
+| stats_g/std        | 0.17907667          |
+| stats_o/mean       | 0.18781239          |
+| stats_o/std        | 0.094632804         |
+| test/episode       | 660.0               |
+| test/mean_Q        | -11.227425          |
+| test/success_rate  | 0.48749999999999993 |
+| train/episode      | 3300.0              |
+| train/success_rate | 0.14500000000000002 |
+--------------------------------------------
+-----------------------------------
+| epoch              | 33         |
+| stats_g/mean       | 0.79729074 |
+| stats_g/std        | 0.1795006  |
+| stats_o/mean       | 0.18791987 |
+| stats_o/std        | 0.09527738 |
+| test/episode       | 680.0      |
+| test/mean_Q        | -11.871054 |
+| test/success_rate  | 0.4625     |
+| train/episode      | 3400.0     |
+| train/success_rate | 0.125      |
+-----------------------------------
+--------------------------------------------
+| epoch              | 34                  |
+| stats_g/mean       | 0.79765385          |
+| stats_g/std        | 0.17997432          |
+| stats_o/mean       | 0.18802668          |
+| stats_o/std        | 0.096177034         |
+| test/episode       | 700.0               |
+| test/mean_Q        | -13.134188          |
+| test/success_rate  | 0.23750000000000002 |
+| train/episode      | 3500.0              |
+| train/success_rate | 0.15                |
+--------------------------------------------
+--------------------------------------------
+| epoch              | 35                  |
+| stats_g/mean       | 0.7981364           |
+| stats_g/std        | 0.18021484          |
+| stats_o/mean       | 0.1881843           |
+| stats_o/std        | 0.09667686          |
+| test/episode       | 720.0               |
+| test/mean_Q        | -13.39282           |
+| test/success_rate  | 0.4375              |
+| train/episode      | 3600.0              |
+| train/success_rate | 0.14750000000000002 |
+--------------------------------------------
+Saving periodic policy to logs/policy_35.pkl ...
+------------------------------------
+| epoch              | 36          |
+| stats_g/mean       | 0.7985545   |
+| stats_g/std        | 0.18005525  |
+| stats_o/mean       | 0.18831623  |
+| stats_o/std        | 0.096937455 |
+| test/episode       | 740.0       |
+| test/mean_Q        | -14.079533  |
+| test/success_rate  | 0.4125      |
+| train/episode      | 3700.0      |
+| train/success_rate | 0.175       |
+------------------------------------
+------------------------------------
+| epoch              | 37          |
+| stats_g/mean       | 0.79885626  |
+| stats_g/std        | 0.17985852  |
+| stats_o/mean       | 0.18835089  |
+| stats_o/std        | 0.0970158   |
+| test/episode       | 760.0       |
+| test/mean_Q        | -12.5021925 |
+| test/success_rate  | 0.4625      |
+| train/episode      | 3800.0      |
+| train/success_rate | 0.195       |
+------------------------------------
+--------------------------------------------
+| epoch              | 38                  |
+| stats_g/mean       | 0.7995212           |
+| stats_g/std        | 0.17964147          |
+| stats_o/mean       | 0.18854897          |
+| stats_o/std        | 0.09707739          |
+| test/episode       | 780.0               |
+| test/mean_Q        | -13.318758          |
+| test/success_rate  | 0.39999999999999997 |
+| train/episode      | 3900.0              |
+| train/success_rate | 0.1675              |
+--------------------------------------------
+--------------------------------------------
+| epoch              | 39                  |
+| stats_g/mean       | 0.79970837          |
+| stats_g/std        | 0.17979163          |
+| stats_o/mean       | 0.18861295          |
+| stats_o/std        | 0.09737178          |
+| test/episode       | 800.0               |
+| test/mean_Q        | -15.136314          |
+| test/success_rate  | 0.36250000000000004 |
+| train/episode      | 4000.0              |
+| train/success_rate | 0.1925              |
+--------------------------------------------
+-----------------------------------
+| epoch              | 40         |
+| stats_g/mean       | 0.80014247 |
+| stats_g/std        | 0.17990899 |
+| stats_o/mean       | 0.18875743 |
+| stats_o/std        | 0.09776675 |
+| test/episode       | 820.0      |
+| test/mean_Q        | -10.847424 |
+| test/success_rate  | 0.55       |
+| train/episode      | 4100.0     |
+| train/success_rate | 0.13       |
+-----------------------------------
+New best success rate: 0.55. Saving policy to logs/policy_best.pkl ...
+Saving periodic policy to logs/policy_40.pkl ...
+-----------------------------------
+| epoch              | 41         |
+| stats_g/mean       | 0.8005276  |
+| stats_g/std        | 0.18006049 |
+| stats_o/mean       | 0.18888827 |
+| stats_o/std        | 0.09807341 |
+| test/episode       | 840.0      |
+| test/mean_Q        | -14.138108 |
+| test/success_rate  | 0.4625     |
+| train/episode      | 4200.0     |
+| train/success_rate | 0.175      |
+-----------------------------------
+--------------------------------------------
+| epoch              | 42                  |
+| stats_g/mean       | 0.800802            |
+| stats_g/std        | 0.18007158          |
+| stats_o/mean       | 0.18899278          |
+| stats_o/std        | 0.098389596         |
+| test/episode       | 860.0               |
+| test/mean_Q        | -14.452129          |
+| test/success_rate  | 0.32499999999999996 |
+| train/episode      | 4300.0              |
+| train/success_rate | 0.14250000000000002 |
+--------------------------------------------
+-----------------------------------
+| epoch              | 43         |
+| stats_g/mean       | 0.8010976  |
+| stats_g/std        | 0.18012585 |
+| stats_o/mean       | 0.18911034 |
+| stats_o/std        | 0.09861472 |
+| test/episode       | 880.0      |
+| test/mean_Q        | -12.965824 |
+| test/success_rate  | 0.4875     |
+| train/episode      | 4400.0     |
+| train/success_rate | 0.1825     |
+-----------------------------------
+------------------------------------
+| epoch              | 44          |
+| stats_g/mean       | 0.8015936   |
+| stats_g/std        | 0.17990506  |
+| stats_o/mean       | 0.18921871  |
+| stats_o/std        | 0.098851755 |
+| test/episode       | 900.0       |
+| test/mean_Q        | -13.446504  |
+| test/success_rate  | 0.4875      |
+| train/episode      | 4500.0      |
+| train/success_rate | 0.1625      |
+------------------------------------
+-----------------------------------
+| epoch              | 45         |
+| stats_g/mean       | 0.802022   |
+| stats_g/std        | 0.17978323 |
+| stats_o/mean       | 0.18932186 |
+| stats_o/std        | 0.09896963 |
+| test/episode       | 920.0      |
+| test/mean_Q        | -13.958925 |
+| test/success_rate  | 0.4625     |
+| train/episode      | 4600.0     |
+| train/success_rate | 0.1925     |
+-----------------------------------
+Saving periodic policy to logs/policy_45.pkl ...
+-----------------------------------
+| epoch              | 46         |
+| stats_g/mean       | 0.80247355 |
+| stats_g/std        | 0.17966257 |
+| stats_o/mean       | 0.18946058 |
+| stats_o/std        | 0.09929529 |
+| test/episode       | 940.0      |
+| test/mean_Q        | -14.516033 |
+| test/success_rate  | 0.3625     |
+| train/episode      | 4700.0     |
+| train/success_rate | 0.19       |
+-----------------------------------
+------------------------------------
+| epoch              | 47          |
+| stats_g/mean       | 0.80287546  |
+| stats_g/std        | 0.17958742  |
+| stats_o/mean       | 0.18957995  |
+| stats_o/std        | 0.099434204 |
+| test/episode       | 960.0       |
+| test/mean_Q        | -12.221974  |
+| test/success_rate  | 0.425       |
+| train/episode      | 4800.0      |
+| train/success_rate | 0.2         |
+------------------------------------
+--------------------------------------------
+| epoch              | 48                  |
+| stats_g/mean       | 0.8032915           |
+| stats_g/std        | 0.17959936          |
+| stats_o/mean       | 0.18968387          |
+| stats_o/std        | 0.09972039          |
+| test/episode       | 980.0               |
+| test/mean_Q        | -10.262386          |
+| test/success_rate  | 0.675               |
+| train/episode      | 4900.0              |
+| train/success_rate | 0.20500000000000002 |
+--------------------------------------------
+New best success rate: 0.675. Saving policy to logs/policy_best.pkl ...
+------------------------------------
+| epoch              | 49          |
+| stats_g/mean       | 0.8037618   |
+| stats_g/std        | 0.17928095  |
+| stats_o/mean       | 0.18977217  |
+| stats_o/std        | 0.099849656 |
+| test/episode       | 1000.0      |
+| test/mean_Q        | -13.393787  |
+| test/success_rate  | 0.5         |
+| train/episode      | 5000.0      |
+| train/success_rate | 0.1775      |
+------------------------------------
