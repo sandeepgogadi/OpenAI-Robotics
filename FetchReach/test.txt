@@ -1,15 +1,16 @@
+Logging to /tmp/openai-2018-11-13-21-07-58-968108
 Creating a DDPG agent with action space 4 x 1.0...
-2018-09-10 19:08:41.342891: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-2018-09-10 19:08:41.412200: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:898] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2018-09-10 19:08:41.412700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1356] Found device 0 with properties: 
+2018-11-13 21:08:02.327235: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2018-11-13 21:08:02.385827: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-11-13 21:08:02.386262: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1411] Found device 0 with properties: 
 name: GeForce GTX 1050 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.62
 pciBusID: 0000:01:00.0
-totalMemory: 3.95GiB freeMemory: 3.48GiB
-2018-09-10 19:08:41.412733: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1435] Adding visible gpu devices: 0
-2018-09-10 19:08:41.601068: I tensorflow/core/common_runtime/gpu/gpu_device.cc:923] Device interconnect StreamExecutor with strength 1 edge matrix:
-2018-09-10 19:08:41.601109: I tensorflow/core/common_runtime/gpu/gpu_device.cc:929]      0 
-2018-09-10 19:08:41.601140: I tensorflow/core/common_runtime/gpu/gpu_device.cc:942] 0:   N 
-2018-09-10 19:08:41.601324: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1053] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3206 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+totalMemory: 3.95GiB freeMemory: 3.46GiB
+2018-11-13 21:08:02.386275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1490] Adding visible gpu devices: 0
+2018-11-13 21:08:02.602644: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] Device interconnect StreamExecutor with strength 1 edge matrix:
+2018-11-13 21:08:02.602686: I tensorflow/core/common_runtime/gpu/gpu_device.cc:977]      0 
+2018-11-13 21:08:02.602692: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990] 0:   N 
+2018-11-13 21:08:02.602885: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1103] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 3181 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
 T: 50
 _Q_lr: 0.001
 _action_l2: 1.0
@@ -26,24 +27,34 @@ _pi_lr: 0.001
 _polyak: 0.95
 _relative_goals: False
 _scope: ddpg
-ddpg_params: {'buffer_size': 1000000, 'hidden': 256, 'layers': 3, 'network_class': 'baselines.her.actor_critic:ActorCritic', 'polyak': 0.95, 'batch_size': 256, 'Q_lr': 0.001, 'pi_lr': 0.001, 'norm_eps': 0.01, 'norm_clip': 5, 'max_u': 1.0, 'action_l2': 1.0, 'clip_obs': 200.0, 'scope': 'ddpg', 'relative_goals': False}
+aux_loss_weight: 0.0078
+bc_loss: 0
+ddpg_params: {'norm_clip': 5, 'action_l2': 1.0, 'norm_eps': 0.01, 'clip_obs': 200.0, 'pi_lr': 0.001, 'Q_lr': 0.001, 'max_u': 1.0, 'scope': 'ddpg', 'buffer_size': 1000000, 'hidden': 256, 'polyak': 0.95, 'relative_goals': False, 'layers': 3, 'batch_size': 256, 'network_class': 'baselines.her.actor_critic:ActorCritic'}
+demo_batch_size: 128
 env_name: FetchReach-v1
 gamma: 0.98
-make_env: <function prepare_params.<locals>.make_env at 0x7f8bf02208c8>
+make_env: <function prepare_params.<locals>.make_env at 0x7f63031708c8>
 n_batches: 40
 n_cycles: 10
 n_test_rollouts: 10
 noise_eps: 0.2
+num_demo: 100
+prm_loss_weight: 0.001
+q_filter: 0
 random_eps: 0.3
 replay_k: 4
 replay_strategy: future
 rollout_batch_size: 2
 test_with_polyak: False
 Creating window glfw
-----------------------------------
-| test/episode      | 10         |
-| test/mean_Q       | -0.2099143 |
-| test/success_rate | 1          |
-----------------------------------
-/home/sandeepgogadi/Packages/gym/gym/__init__.py:22: UserWarning: DEPRECATION WARNING: to improve load times, gym no longer automatically loads gym.spaces. Please run "import gym.spaces" to load gym.spaces on your own. This warning will turn into an error in a future version of gym.
-  warnings.warn('DEPRECATION WARNING: to improve load times, gym no longer automatically loads gym.spaces. Please run "import gym.spaces" to load gym.spaces on your own. This warning will turn into an error in a future version of gym.')
+-----------------------------------
+| test/episode      | 10          |
+| test/mean_Q       | -0.07305013 |
+| test/success_rate | 1           |
+-----------------------------------
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)
+/usr/lib/python3.5/importlib/_bootstrap.py:222: RuntimeWarning: numpy.dtype size changed, may indicate binary incompatibility. Expected 96, got 88
+  return f(*args, **kwds)

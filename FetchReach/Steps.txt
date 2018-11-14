@@ -1,5 +1,5 @@
-python FetchReach.py |& tee sample.txt
+python3 FetchReach.py |& tee sample.txt
 
-python -m baselines.her.experiment.train --env FetchReach-v1 --logdir logs --n_epochs 50 --num_cpu 2 --policy_save_interval 1 |& tee train.txt
+python3 -m baselines.her.experiment.train --env FetchReach-v1 --logdir logs --n_epochs 50 --num_cpu 2 --policy_save_interval 1 |& tee train.txt
 
-python -m baselines.her.experiment.play logs/policy_15.pkl |& tee test.txt
+python3 -m baselines.her.experiment.play logs/policy_best.pkl |& tee test.txt
